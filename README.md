@@ -1,2 +1,42 @@
 # DL-hybrid-precoder
-Source code for paper Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems 
+This is the source code for paper ["Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems"] (https://arxiv.org/abs/1905.13212)
+
+In the paper, we proposes a novel neural network architecture, that we call an auto-precoder, and a deep-learning based approach that jointly senses the millimeter wave (mmWave) channel and designs the hybrid precoding matrices with only a few training pilots. More specifically, the proposed model leverages the prior observations of the channel to achieve two objectives. First, it optimizes the compressive channel sensing vectors based on the surrounding environment in an unsupervised manner to focus the sensing power on the most promising spatial directions. This is enabled by a novel neural network architecture that accounts for the constraints on the RF chains and models the transmitter/receiver measurement matrices as two complex-valued convolutional layers. Second, the proposed model learns how to construct the RF beamforming vectors of the hybrid architectures directly from the projected channel vector (the received sensing vector). The auto-precoder neural network that incorporates both the channel sensing and beam prediction is trained end-to-end as a multi-task classification problem. The network is shown in the following figure.
+
+![Figure1](https://github.com/lxf8519/DL-hybrid-precoder/blob/master/NN_hybrid.jpg)
+
+To find more information and other deep-learining based wireless communication work, please visit [DeepMIMO dataset](https://github.com/DeepMIMO/DeepMIMO-codes).
+
+# Run training and tesing
+1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset=DeepMIMO_dataset_train20.mat which is corresponding to total transmit power of 20dB, epochs=15, batch_size=512, learning_rate=0.002.
+
+2. If you need to change dataset and parameters, they can be changed in python "main_train_beamforming.py"
+
+3. The prediction accurate results for dataset=DeepMIMO_dataset_train20.mat are given in the following table (same results as those in the paper):
+
+| Transmit power (dBm)| 20 |
+| -------- | ------ |
+| Tx acc.(Mt=Mr=2) | 0.72 |
+| Rx acc.(Mt=Mr=2) | 0.71 |
+| Tx acc.(Mt=Mr=4) | 0.77 |
+| Rx acc.(Mt=Mr=4) | 0.78 |
+| Tx acc.(Mt=Mr=8) | 0.89 |
+| Rx acc.(Mt=Mr=8) | 0.89 |
+
+To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the complete datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat are required (See the following part for dataset).
+
+# Dataset 
+We provide small training and testing datasets here to quickly run the code. For the complete dataset, please visit [DeepMIMO dataset](https://github.com/DeepMIMO/DeepMIMO-codes) and find the link for the dataset there.
+
+# Citation
+If you find the code is useful, please kindly cite our paper. Thanks.
+```
+@article{li2019deep,
+  title={Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems},
+  author={Li, Xiaofeng and Alkhateeb, Ahmed},
+  journal={arXiv preprint arXiv:1905.13212},
+  year={2019}
+}
+```
+# License
+This code package is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
