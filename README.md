@@ -1,5 +1,5 @@
 # DL-hybrid-precoder
-This is the source code for paper ["Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems"] (https://arxiv.org/abs/1905.13212)
+This is the source code for paper ["Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems"](https://arxiv.org/abs/1905.13212)
 
 In the paper, we proposes a novel neural network architecture, that we call an auto-precoder, and a deep-learning based approach that jointly senses the millimeter wave (mmWave) channel and designs the hybrid precoding matrices with only a few training pilots. More specifically, the proposed model leverages the prior observations of the channel to achieve two objectives. First, it optimizes the compressive channel sensing vectors based on the surrounding environment in an unsupervised manner to focus the sensing power on the most promising spatial directions. This is enabled by a novel neural network architecture that accounts for the constraints on the RF chains and models the transmitter/receiver measurement matrices as two complex-valued convolutional layers. Second, the proposed model learns how to construct the RF beamforming vectors of the hybrid architectures directly from the projected channel vector (the received sensing vector). The auto-precoder neural network that incorporates both the channel sensing and beam prediction is trained end-to-end as a multi-task classification problem. The network is shown in the following figure.
 
@@ -12,7 +12,7 @@ To find more information and other deep-learining based wireless communication w
 
 2. If you need to change dataset and parameters, they can be changed in python "main_train_beamforming.py"
 
-3. The prediction accurate results for dataset=DeepMIMO_dataset_train20.mat are given in the following table (same results as those in the paper):
+3. The prediction accurate results for dataset=DeepMIMO_dataset_train20.mat are given in the following table (same results are reported in the paper):
 
 | Transmit power (dBm)| 20 |
 | -------- | ------ |
