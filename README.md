@@ -12,7 +12,7 @@ To find more information about the paper and other deep-learining based wireless
 
 2. If you need to change the dataset and parameters, they can be found in "main_train_beamforming.py".
 
-3. The prediction accurate results for dataset DeepMIMO_dataset_train20.mat are given in the following table (same results are reported in the paper):
+3. The prediction accuracy results for the transmitter and receiver on dataset DeepMIMO_dataset_train20.mat are given in the following table (same results are reported in the paper). The total transmit power for this dataset is 20 dBm.
 
 | Transmit power (dBm)| 20 |
 | -------- | ------ |
@@ -26,7 +26,7 @@ To find more information about the paper and other deep-learining based wireless
 To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the complete datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat are required (See the following part for dataset).
 
 # Dataset 
-We provide small training and testing datasets here to quickly run the code. For the complete dataset, download [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL). To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
+We provide small training and testing datasets on github to quickly run the code. The complete dataset can be downloaded [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL). To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
 
 # Citation
 If you find the code is useful, please kindly cite our paper. Thanks.
@@ -35,6 +35,7 @@ If you find the code is useful, please kindly cite our paper. Thanks.
   title={Deep Learning for Direct Hybrid Precoding in Millimeter Wave Massive MIMO Systems},
   author={Li, Xiaofeng and Alkhateeb, Ahmed},
   journal={arXiv preprint arXiv:1905.13212},
+  month={May},
   year={2019}
 }
 ```
