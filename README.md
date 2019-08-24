@@ -5,10 +5,10 @@ In the paper, we proposes a novel neural network architecture, that we call an a
 
 ![Figure1](https://github.com/lxf8519/DL-hybrid-precoder/blob/master/NN_hybrid.jpg)
 
-To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO.net](http://deepmimo.net/index.html).
+To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO dataset applications](http://deepmimo.net/DeepMIMO_applications.html?i=1).
 
 # Run training and tesing
-1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset=DeepMIMO_dataset_train20.mat (which is corresponding to total transmit power of 20dB), epochs=15, batch_size=512, learning_rate=0.002.
+1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset='DeepMIMO_dataset_train20.mat' (which is corresponding to total transmit power of 20dB), epochs=15, batch_size=512, learning_rate=0.002.
 
 2. If you need to change the dataset and parameters, they can be found in "main_train_beamforming.py".
 
@@ -26,7 +26,7 @@ To find more information about the paper and other deep-learining based wireless
 To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the complete datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat are required (See the following part for dataset).
 
 # Dataset 
-We provide small training and testing datasets here to quickly run the code. For the complete dataset, please visit [DeepMIMO dataset applications](http://deepmimo.net/DeepMIMO_applications.html?i=1) and find the link for the dataset there.
+We provide small training and testing datasets here to quickly run the code. For the complete dataset, download [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL). To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
 
 # Citation
 If you find the code is useful, please kindly cite our paper. Thanks.
