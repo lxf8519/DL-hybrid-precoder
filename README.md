@@ -8,25 +8,25 @@ In the paper, we proposes a novel neural network architecture, that we call an a
 To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO dataset applications](http://deepmimo.net/DeepMIMO_applications.html?i=1).
 
 # Run training and tesing
-1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset='DeepMIMO_dataset_train20.mat' (which is corresponding to total transmit power of 20dB), epochs=15, batch_size=512, learning_rate=0.002.
+1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset='DeepMIMO_dataset_train20.mat' and 'DeepMIMO_dataset_test20.mat' (which are corresponding to total transmit power of 20dB), epochs=15, batch_size=512, learning_rate=0.002.
 
 2. If you need to change the dataset and parameters, they can be found in "main_train_beamforming.py".
 
-3. The prediction accuracy results for the transmitter and receiver on dataset DeepMIMO_dataset_train20.mat are given in the following table (same results are reported in the paper). The total transmit power for this dataset is 20 dBm.
+3. The prediction accuracy results for the transmitter and receiver on the default dataset are given in the following table. The total transmit power for this dataset is 20 dBm.
 
 | Transmit power (dBm)| 20 |
 | -------- | ------ |
-| Tx acc.(Mt=Mr=2) | 0.72 |
-| Rx acc.(Mt=Mr=2) | 0.71 |
-| Tx acc.(Mt=Mr=4) | 0.77 |
-| Rx acc.(Mt=Mr=4) | 0.78 |
-| Tx acc.(Mt=Mr=8) | 0.89 |
-| Rx acc.(Mt=Mr=8) | 0.89 |
+| Tx acc.(Mt=Mr=2) | 0.71 |
+| Rx acc.(Mt=Mr=2) | 0.69 |
+| Tx acc.(Mt=Mr=4) | 0.78 |
+| Rx acc.(Mt=Mr=4) | 0.76 |
+| Tx acc.(Mt=Mr=8) | 0.88 |
+| Rx acc.(Mt=Mr=8) | 0.88 |
 
-To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the complete datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat are required (See the following part for dataset).
+**To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat (and the corresponding label mat files) are required (See the following part for dataset)**.
 
 # Dataset 
-We provide small training and testing datasets on github to quickly run the code. The complete dataset can be downloaded [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL). To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
+**The dataset can be downloaded [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL) from Google drive.** There are 4 files for training and testing and the labels. **After downlaoding, copy these 4 files to MIMO_dataset folder.** To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
 
 # Citation
 If you find the code is useful, please kindly cite our paper. Thanks.
