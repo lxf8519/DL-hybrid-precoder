@@ -8,7 +8,7 @@ In the paper, we proposes a novel neural network architecture, that we call an a
 To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO dataset applications](http://deepmimo.net/DeepMIMO_applications.html?i=1).
 
 # Requirement
-Tensorflow 1.13.1, Keras 2.3.1 (TF 2.0 does not work)
+Tensorflow 1.12.0, Keras 2.2.4 (TF 2.0 does not work)
 
 # Run training and tesing
 1. Quick run: Run in terminal "python main_train_beamforming.py -train 1" to train the model and run "python main_train_beamforming.py -train 0" for testing. The default parameters are: dataset='DeepMIMO_dataset_train20.mat' and 'DeepMIMO_dataset_test20.mat' (which are corresponding to total transmit power of 20dB), epochs=15, batch_size=512, learning_rate=0.002.
