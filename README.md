@@ -5,7 +5,7 @@ In the paper, we proposes a novel neural network architecture, that we call an a
 
 ![Figure1](https://github.com/lxf8519/DL-hybrid-precoder/blob/master/NN_hybrid.jpg)
 
-To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO dataset applications](http://deepmimo.net/DeepMIMO_applications.html?i=1).
+To find more information about the paper and other deep-learining based wireless communication work, please visit [DeepMIMO dataset applications](https://deepmimo.net/applications/).
 
 # Requirement
 Tensorflow 1.12.0, Keras 2.2.4 (TF 2.0 does not work)
@@ -29,7 +29,7 @@ Tensorflow 1.12.0, Keras 2.2.4 (TF 2.0 does not work)
 **To reproduce the results, the pre-trained model in Saved_model folder needs to be loaded for testing. Also, the datasets of DeepMIMO_dataset_train20.mat and DeepMIMO_dataset_test20.mat (and the corresponding label mat files) are required (See the following part for dataset)**.
 
 # Dataset 
-**The dataset can be downloaded [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL) from Google drive.** There are 4 files for training and testing and the labels. **After downlaoding, copy these 4 files to MIMO_dataset folder.** To generate your own dataset, visit [DeepMIMO.net](http://deepmimo.net/index.html).
+**The dataset can be downloaded [here](https://drive.google.com/open?id=1sMiDGhPYpblkkcQgvq4F5q7w2AINfkgL) from Google drive.** There are 4 files for training and testing and the labels. **After downlaoding, copy these 4 files to MIMO_dataset folder.** To generate your own dataset, visit [DeepMIMO.net](https://deepmimo.net/).
 
 # Citation
 If you find the code is useful, please kindly cite our paper. Thanks.
